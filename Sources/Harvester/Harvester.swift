@@ -25,3 +25,5 @@ extension Sequence {
         Array(shuffled().prefix(num))
     }
 }
+
+let tau = 2 * Double.pi
