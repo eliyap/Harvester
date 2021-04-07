@@ -20,3 +20,7 @@ let dataTaskMonitor = { (result: URLSession.DataTaskPublisher.Output) -> Data in
     }
     return result.data
 }
+
+extension Double {
+    public static let tau = 2 * Double.pi
+}
