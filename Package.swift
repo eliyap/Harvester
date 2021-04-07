@@ -22,7 +22,7 @@ let package = Package(
             name: "Harvester",
             dependencies: [],
             resources: [
-                .copy("Harvester/DataTaskMonitor.swift")
+                .copy("DataTaskMonitor.swift")
             ]
         ),
         .testTarget(
