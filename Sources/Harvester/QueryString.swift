@@ -7,10 +7,12 @@
 
 import Foundation
 
-public func URL(string: String, with parameters: [String: String]) -> URL? {
-    URL(string: string
-        + parameters
-            .map{"\($0.key)=\($0.value)"}
-            .joined(separator: "&")
-    )
+public extension URL {
+    init?(string: String, with parameters: [String: String]){
+        self.init(string: string
+            + parameters
+                .map{"\($0.key)=\($0.value)"}
+                .joined(separator: "&")
+        )
+    }
 }
