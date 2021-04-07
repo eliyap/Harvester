@@ -8,8 +8,8 @@
 
 import Foundation
 
-/// return input as an optional
-/// used with Combine to change publisher type to optional
-func toOptional<T>(input: T) -> T? {
+/// Returns input as an Optional.
+/// Used with `Combine` to change publisher type to optional
+public func toOptional<T>(input: T) -> T? {
     input
 }
