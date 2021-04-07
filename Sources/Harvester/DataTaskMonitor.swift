@@ -10,6 +10,8 @@ import Foundation
 
 /// boilerplate function that attaches to a `URLSession.DataTaskPublisher` and reports on the response code, then unwraps the `data`
 /// can probably be build up over future projects to be more capable
+#if canImport(Combine)
+import Combine
 @available(iOS 13.0, *)
 public let dataTaskMonitor = { (result: URLSession.DataTaskPublisher.Output) -> Data in
     let code = (result.response as? HTTPURLResponse)?.statusCode
@@ -20,6 +22,7 @@ public let dataTaskMonitor = { (result: URLSession.DataTaskPublisher.Output) -> 
     }
     return result.data
 }
+#endif
 
 public extension Double {
     static let tau = 2 * Double.pi

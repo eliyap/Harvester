@@ -20,11 +20,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "Harvester",
-            dependencies: [],
-            resources: [
-                .process("DataTaskMonitor.swift")
-            ]
-        ),
+            dependencies: []),
         .testTarget(
             name: "HarvesterTests",
             dependencies: ["Harvester"]),
