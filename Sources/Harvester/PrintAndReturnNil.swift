@@ -7,14 +7,15 @@
 //
 
 import Foundation
+#if canImport(Combine)
 import Combine
-
 /**
  print any errors that are encountered,
  then return `nil`.
  Note: unlike `replaceErrorWith(nil)`, this prints the issue to console instead of suppressing it
  */
 @available(iOS 13.0, *)
+@available(macOS 10.15, *)
 func printAndReturnNil<T>(error: Error) -> AnyPublisher<T?, Never> {
     #if DEBUG
     print(error)
@@ -22,3 +23,5 @@ func printAndReturnNil<T>(error: Error) -> AnyPublisher<T?, Never> {
     return Just(nil)
         .eraseToAnyPublisher()
 }
+#endif
+
