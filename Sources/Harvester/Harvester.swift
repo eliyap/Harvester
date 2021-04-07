@@ -19,3 +19,9 @@ let dataTaskMonitor = { (result: URLSession.DataTaskPublisher.Output) -> Data in
 }
 
 #endif
+
+extension Sequence {
+    public func random(_ num: Int) -> [Element] {
+        Array(shuffled().prefix(num))
+    }
+}
