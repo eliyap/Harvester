@@ -26,4 +26,6 @@ extension Sequence {
     }
 }
 
-let tau = 2 * Double.pi
+extension Double {
+    static let tau = 2 * Double.pi
+}
