@@ -7,7 +7,7 @@
 
 import Foundation
 
-func JSONDecode<T>(type: T.Type) -> (Data) throws -> (T) where T: Decodable {
+public func JSONDecode<T>(type: T.Type) -> (Data) throws -> (T) where T: Decodable {
     return { (data: Data) throws -> T in
         try JSONDecoder().decode(T.self, from: data)
     }
